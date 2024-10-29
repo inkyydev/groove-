@@ -231,7 +231,7 @@
 }
 @media (max-width: 767px) {
   #search_section {
-    padding: 143px 0 100px;
+    padding: 143px 0 50px;
   }
   .search-heading h1 {
     margin-bottom: 15px;
@@ -280,5 +280,39 @@
     position: absolute;
     right: 0;
     top: 5px;
+  }
+  .mob-hide {
+    display: none;
+  }
+  .song-list td {
+    padding: 10px 0;
+  }
+  .song-lst h3 {
+    margin-left: 13px;
+    font-size: 14px;
+  }
+  .ply-lkr button:last-of-type {
+    display: none;
+  }
+  .song-lst h3 span {
+    font-size: 11px;
+  }
+  .ply-lkr button:first-of-type img {
+    width: 21px;
+  }
+  .ply-lkr {
+    flex-basis: 21px;
+    max-width: 21px;
+  }
+  .llst-mang > a {
+    flex: 1;
+    display: flex;
+    padding-right: 10px;
+  }
+  .table-list {
+    margin-top: 5px;
+  }
+  .filter-section {
+    padding-bottom: 10px;
   }
 }
