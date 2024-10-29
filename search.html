@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Groove Engine - Sign In</title>
+    <link rel="stylesheet" href="assets/select2.min.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="fl-page">
+      <header id="header"></header>
+      <main>
+        <section id="search_section">
+          <div class="container">
+            <div class="search-heading">
+              <h1>
+                Find your <span class="orange-text">favorite</span> loops and
+                songs
+              </h1>
+              <img src="images/search-img-separator.svg" alt="line" />
+              <div class="search-area">
+                <form action="" id="searchForm" method="get">
+                  <div class="search-song">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="search"
+                      id="search"
+                      placeholder="Search songs or loops"
+                      aria-label="Search songs or loops"
+                    />
+                    <button
+                      type="submit"
+                      class="clear-data"
+                      onclick="trackSearch();"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="filter-section-wrapper">
+              <div class="filter-icon-wrapper">
+                <a href="#">
+                  <img src="images/filter-svg.svg" alt="filter" />
+                </a>
+              </div>
+              <div class="filter-section">
+                <form action="" method="get" class="d-block">
+                  <div class="srch-flter">
+                    <div class="form-group">
+                      <select
+                        name="category"
+                        class="form-control select2-show-search"
+                        id="category"
+                        aria-label="Select Genre"
+                      >
+                        <option value="">Select Genre</option>
+                        <option value="1">Percussion</option>
+                        <option value="2">Handpan</option>
+                        <option value="3">Hip-Hop</option>
+                        <option value="4">Guitar</option>
+                        <option value="5">Lo-fi</option>
+                        <option value="6">Drone</option>
+                        <option value="55">Piano</option>
+                        <option value="56">Trap</option>
+                        <option value="57">Exercises</option>
+                        <option value="58">Grooves</option>
+                        <option value="59">Fills</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <select
+                        name="key"
+                        id="key"
+                        class="form-control select2-show-search"
+                        aria-label="Select Key"
+                      >
+                        <option value="">Select Key</option>
+                        <option value="A">A</option>
+                        <option value="A# / Bb">A# / Bb</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="C# / Db">C# / Db</option>
+                        <option value="D">D</option>
+                        <option value="D# / Eb">D# / Eb</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="F# / Gb">F# / Gb</option>
+                        <option value="G">G</option>
+                        <option value="G# / Ab">G# / Ab</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <select
+                        name="scale_type"
+                        id="scale_type"
+                        class="form-control select2-show-search"
+                        aria-label="Select Scale Type"
+                      >
+                        <option value="">Select Scale Type</option>
+                        <option value="N/A">N/A</option>
+                        <option value="Major">Major</option>
+                        <option value="Minor">Minor</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <select
+                        name="signature"
+                        id="signature"
+                        class="form-control select2-show-search"
+                        aria-label="Select Signature"
+                      >
+                        <option value="">Select Signature</option>
+                        <option value="N/A">N/A</option>
+                        <option value="2/4">2/4</option>
+                        <option value="3/4">3/4</option>
+                        <option value="4/4">4/4</option>
+                        <option value="5/4">5/4</option>
+                        <option value="6/4">6/4</option>
+                        <option value="7/4">7/4</option>
+                        <option value="3/8">3/8</option>
+                        <option value="5/8">5/8</option>
+                        <option value="6/8">6/8</option>
+                        <option value="7/8">7/8</option>
+                        <option value="9/8">9/8</option>
+                        <option value="10/8">10/8</option>
+                        <option value="11/8">11/8</option>
+                        <option value="12/8">12/8</option>
+                        <option value="13/8">13/8</option>
+                      </select>
+                    </div>
+
+                    <div
+                      class="form-group d-flex align-items-center button-group"
+                    >
+                      <button class="" type="submit">Search</button>
+                      <button
+                        class="btn-text"
+                        type="button"
+                        onclick="window.location.href='https://planethandpan.shinedezign.pro/user/search'"
+                      >
+                        Reset
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="table-list">
+              <table class="table">
+                <tbody id="playlistBody">
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/41771707436296.png"
+                              alt=""
+                            />
+                            <h3>
+                              Glass Bowl - Drones vol. 1<span
+                                >Drones vol. 1 | N/A | A# / Bb | N/A | N/A</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-256"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('256','157')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg0">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(0);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/41771707436296.png"
+                              alt=""
+                            />
+                            <h3>
+                              Salami K Uhh - Drones vol. 1<span
+                                >Drones vol. 1 | Minor | D | N/A | N/A</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-257"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('257','157')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg1">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(1);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/95551707436709.png"
+                              alt=""
+                            />
+                            <h3>
+                              2018 - Solo Guitar vol. 1<span
+                                >Solo Guitar vol. 1 | Minor | A | 4/4 | 86</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-258"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('258','159')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg2">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(2);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/95551707436709.png"
+                              alt=""
+                            />
+                            <h3>
+                              A Certain Curtain - Solo Guitar vol. 1<span
+                                >Solo Guitar vol. 1 | Minor | C | 4/4 |
+                                110</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-260"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('260','159')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg3">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(3);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/92011707436015.png"
+                              alt=""
+                            />
+                            <h3>
+                              45 Minutes to Go - Trap vol. 1<span
+                                >Trap vol. 1 | Minor | D | 4/4 | 72</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-261"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('261','155')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg4">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(4);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/92011707436015.png"
+                              alt=""
+                            />
+                            <h3>
+                              A Delightful Walk in the Park - Trap vol. 1<span
+                                >Trap vol. 1 | Minor | B | 4/4 | 120</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-262"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('262','155')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg5">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(5);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/92011707436015.png"
+                              alt=""
+                            />
+                            <h3>
+                              Absolute Buffoonery - Trap vol. 1<span
+                                >Trap vol. 1 | Minor | G | 4/4 | 130</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-263"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('263','155')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg6">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(6);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/92011707436015.png"
+                              alt=""
+                            />
+                            <h3>
+                              Charles Entertainment Cheese - Trap vol. 1<span
+                                >Trap vol. 1 | Minor | G | 4/4 | 75</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-264"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('264','155')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg7">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(7);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/92011707436015.png"
+                              alt=""
+                            />
+                            <h3>
+                              Don't forget bout ya boy Skiffle - Trap vol.
+                              1<span>Trap vol. 1 | Minor | D | 4/4 | 75</span>
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-265"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('265','155')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg8">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(8);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="song-list">
+                    <td>
+                      <div class="llst-mang">
+                        <a href="javascript:void(0);">
+                          <div class="song-lst">
+                            <img
+                              src="https://dek6g8pl2pmjz.cloudfront.net/album_images/92011707436015.png"
+                              alt=""
+                            />
+                            <h3>
+                              Frog Mafia - Trap vol. 1<span
+                                >Trap vol. 1 | Minor | E | 4/4 | 75</span
+                              >
+                            </h3>
+                          </div>
+                        </a>
+                        <div class="ply-lkr" id="playlistBody">
+                          <button>
+                            <img
+                              id="favorite-img-266"
+                              src="images/like-svg.svg"
+                              alt=""
+                              onclick="toggleFavorite('266','155')"
+                            />
+                          </button>
+                          <button class="mob-hide">Free</button>
+
+                          <button>
+                            <ul class="play_svg9">
+                              <li>
+                                <a
+                                  href="javascript:void(0);"
+                                  class="play-icon"
+                                  onclick="player.play(9);"
+                                >
+                                  <img src="images/play-icon.svg" alt="" />
+                                </a>
+
+                                <a
+                                  href="javascript:void(0);"
+                                  class="pause-icon"
+                                  onclick="player.pause();"
+                                  style="display: none"
+                                >
+                                  <img src="images/ply-icon-p.svg" alt="img" />
+                                </a>
+                              </li>
+                            </ul>
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="assets/select2.full.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Load header and footer
+      $("#header").load("includes/header.html");
+      $("#footer").load("includes/footer.html");
+
+      // Initialize Select2
+      $(document).ready(function () {
+        $(".select2-show-search").select2({});
+      });
+
+      $(document).ready(function () {
+        $(".filter-icon-wrapper a").on("click", function (e) {
+          e.preventDefault();
+
+          $(".srch-flter").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
