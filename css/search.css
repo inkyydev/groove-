@@ -145,6 +145,22 @@
 .table-list {
   margin-top: 18px;
   border-top: 1px solid #3e79ff;
+  position: relative;
+  overflow: hidden;
+}
+.table-list::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to bottom, rgba(246, 248, 255, 0), #f6f8ff);
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  transition: all 1s ease;
+}
+.table-list.active::before {
+  transform: translateY(100%);
 }
 .llst-mang .song-lst,
 .llst-mang {
@@ -188,6 +204,34 @@
   min-width: 76px;
   text-align: left;
 }
+.custom-pagination {
+  margin-top: 20px;
+}
+.custom-pagination p {
+  margin-bottom: 0;
+}
+.pagination {
+  display: flex;
+  gap: 5px;
+}
+.pagination li .page-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #e7ecfd;
+  border-radius: 5px;
+  color: #43435c;
+}
+.pagination li .page-link:hover,
+.page-item.active .page-link {
+  background: #fd7351;
+  border: 1px solid #fd7351;
+  color: #fff;
+}
 @media (max-width: 1150px) {
   .select2-selection__rendered {
     padding-left: 15px !important;
@@ -228,6 +272,10 @@
   .filter-section-wrapper {
     margin-top: 50px;
   }
+  .custom-pagination > div {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 @media (max-width: 767px) {
   #search_section {
@@ -245,7 +293,7 @@
   }
   .filter-icon-wrapper {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .search-song {
     padding-left: 15px;
@@ -314,5 +362,11 @@
   }
   .filter-section {
     padding-bottom: 10px;
+  }
+  .pagination li .page-link {
+    width: auto;
+  }
+  .custom-pagination {
+    margin-top: 10px;
   }
 }

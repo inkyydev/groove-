@@ -131,8 +131,13 @@ p {
 .container {
   max-width: 1230px !important;
 }
+textarea,
 input {
   box-shadow: none !important;
+}
+textarea:focus,
+input:focus {
+  border-color: #fd7351 !important;
 }
 .main-nav__items--links {
   display: flex;
@@ -219,6 +224,7 @@ input {
   color: #0a213a;
   font-family: "Avenir Light";
   flex: 1;
+  background: transparent !important;
 }
 .footer-subscribe form input::placeholder {
   color: #0a213a;
