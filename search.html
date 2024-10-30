@@ -671,6 +671,147 @@
                 </tbody>
               </table>
             </div>
+            <div class="custom-pagination">
+              <div class="d-flex justify-content-between flex-fill d-sm-none">
+                <ul class="pagination">
+                  <li class="page-item disabled" aria-disabled="true">
+                    <span class="page-link">Previous</span>
+                  </li>
+
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="https://planethandpan.shinedezign.pro/user/search?page=2"
+                      rel="next"
+                      >Next</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="d-none flex-sm-fill d-sm-flex align-items-sm-center justify-content-sm-between"
+              >
+                <div>
+                  <p class="small text-muted">
+                    Showing
+                    <span class="fw-semibold">1</span>
+                    to
+                    <span class="fw-semibold">10</span>
+                    of
+                    <span class="fw-semibold">135</span>
+                    results
+                  </p>
+                </div>
+
+                <div>
+                  <ul class="pagination">
+                    <li
+                      class="page-item disabled"
+                      aria-disabled="true"
+                      aria-label="« Previous"
+                    >
+                      <span class="page-link" aria-hidden="true">‹</span>
+                    </li>
+
+                    <li class="page-item active" aria-current="page">
+                      <span class="page-link">1</span>
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=2"
+                        >2</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=3"
+                        >3</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=4"
+                        >4</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=5"
+                        >5</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=6"
+                        >6</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=7"
+                        >7</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=8"
+                        >8</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=9"
+                        >9</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=10"
+                        >10</a
+                      >
+                    </li>
+
+                    <li class="page-item disabled" aria-disabled="true">
+                      <span class="page-link">...</span>
+                    </li>
+
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=13"
+                        >13</a
+                      >
+                    </li>
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=14"
+                        >14</a
+                      >
+                    </li>
+
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        href="https://planethandpan.shinedezign.pro/user/search?page=2"
+                        rel="next"
+                        aria-label="Next »"
+                        >›</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -681,11 +822,9 @@
     <script src="assets/select2.full.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-      // Load header and footer
       $("#header").load("includes/header.html");
       $("#footer").load("includes/footer.html");
 
-      // Initialize Select2
       $(document).ready(function () {
         $(".select2-show-search").select2({});
       });
@@ -695,6 +834,20 @@
           e.preventDefault();
 
           $(".srch-flter").toggleClass("active");
+        });
+
+        $(window).on("scroll", function () {
+          const target = $(".table-list");
+          const targetOffsetTop = target.offset().top + target.height();
+
+          console.log(targetOffsetTop);
+          const viewportBottom = $(window).scrollTop() + $(window).height();
+
+          if (viewportBottom >= targetOffsetTop) {
+            $(".table-list").addClass("active");
+          } else {
+            $(".table-list").removeClass("active");
+          }
         });
       });
     </script>
