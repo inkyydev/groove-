@@ -1,20 +1,22 @@
 #dis_single_section {
-  padding: 186px 0 107px;
+  padding: 186px 0 60px;
   background: #f6f8ff;
 }
-
+.table-list-single {
+  border-top: 0 !important;
+}
 .song-loop {
   font-size: 14px;
-  font-family: 'Avenir Light';
+  font-family: "Avenir Light";
 }
 .song-loop span {
   color: #767574;
-  font-family: 'Avenir Light';
+  font-family: "Avenir Light";
 }
 
 .category-single {
   font-weight: 900;
-  color: #4766FF;
+  color: #4766ff;
   font-size: 18px;
 }
 
@@ -23,7 +25,7 @@
 }
 .song-dtl p {
   font-size: 18px;
-  color: #43435C;
+  color: #43435c;
 }
 
 .playlist-img-back {
@@ -35,7 +37,7 @@
 #all-play-icon {
   position: absolute;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   top: 50%;
 }
 
@@ -45,7 +47,7 @@
 }
 .relatedtt-song td {
   min-width: 140px;
-  padding:10px 10px 10px 0;
+  padding: 10px 10px 10px 0;
   vertical-align: middle;
 }
 .relatedtt-song thead td {
@@ -54,12 +56,12 @@
 .relatedtt-song td:last-of-type {
   min-width: 50px;
 }
-.relatedtt-song thead td{
-  border-bottom: 1px solid #3E79FF !important;
+.relatedtt-song thead td {
+  border-bottom: 1px solid #3e79ff !important;
 }
 
 .relatedtt-song .song-lst-year {
-  color: #4766FF;
+  color: #4766ff;
   font-weight: 600;
 }
 
@@ -67,7 +69,7 @@
   display: none;
 }
 
-@media(min-width:1025px){
+@media (min-width: 1025px) {
   .relatedtt-song td:first-of-type {
     width: 25%;
   }
@@ -88,7 +90,7 @@
 
 @media (max-width: 767px) {
   #dis_single_section {
-    padding: 143px 0 50px;
+    padding: 143px 0 10px;
   }
   .song-dtl {
     padding-left: 0;
@@ -126,11 +128,11 @@
     background: #fff;
     width: 100%;
     padding: 20px 40px;
-    box-shadow: 0 -10px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     pointer-events: none;
     transform: translateY(50%);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     z-index: 99;
   }
   .dots-mobile-popup.active {
