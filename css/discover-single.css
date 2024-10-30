@@ -1,0 +1,164 @@
+#dis_single_section {
+  padding: 186px 0 107px;
+  background: #f6f8ff;
+}
+
+.song-loop {
+  font-size: 14px;
+  font-family: 'Avenir Light';
+}
+.song-loop span {
+  color: #767574;
+  font-family: 'Avenir Light';
+}
+
+.category-single {
+  font-weight: 900;
+  color: #4766FF;
+  font-size: 18px;
+}
+
+.song-dtl {
+  padding-left: 50px;
+}
+.song-dtl p {
+  font-size: 18px;
+  color: #43435C;
+}
+
+.playlist-img-back {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+#all-play-icon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  top: 50%;
+}
+
+.relatedtt-song {
+  padding: 0 0 60px;
+  background: #f6f8ff;
+}
+.relatedtt-song td {
+  min-width: 140px;
+  padding:10px 10px 10px 0;
+  vertical-align: middle;
+}
+.relatedtt-song thead td {
+  font-weight: 700;
+}
+.relatedtt-song td:last-of-type {
+  min-width: 50px;
+}
+.relatedtt-song thead td{
+  border-bottom: 1px solid #3E79FF !important;
+}
+
+.relatedtt-song .song-lst-year {
+  color: #4766FF;
+  font-weight: 600;
+}
+
+.play_svg0 .dots-mobile {
+  display: none;
+}
+
+@media(min-width:1025px){
+  .relatedtt-song td:first-of-type {
+    width: 25%;
+  }
+  .relatedtt-song td:nth-of-type(4) {
+    width: 15%;
+  }
+  .relatedtt-song td:nth-of-type(6),
+  .relatedtt-song td:nth-of-type(8) {
+    width: 50px;
+  }
+  .relatedtt-song td:nth-of-type(2),
+  .relatedtt-song td:nth-of-type(3),
+  .relatedtt-song td:nth-of-type(5),
+  .relatedtt-song td:nth-of-type(7) {
+    width: calc(15% - 25px);
+  }
+}
+
+@media (max-width: 767px) {
+  #dis_single_section {
+    padding: 143px 0 50px;
+  }
+  .song-dtl {
+    padding-left: 0;
+    padding-top: 40px;
+    text-align: center;
+  }
+  .song-dtl h1 {
+    margin: 5px 0 20px;
+  }
+  .song-dtl p {
+    font-size: 14px;
+  }
+  .song-list-data {
+    justify-content: center;
+  }
+  .relatedtt-song table .mob-hide {
+    display: none;
+  }
+  .play_svg0 .play-icon {
+    display: none;
+  }
+  .play_svg0 {
+    text-align: right;
+  }
+  .play_svg0 .dots-mobile {
+    display: block;
+  }
+  .close-dots-popup {
+    margin-bottom: 20px;
+  }
+  .dots-mobile-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 10;
+    width: 100%;
+    padding: 20px 40px;
+    box-shadow: 0 -10px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50%);
+    transition: all .3s ease;
+  }
+  .dots-mobile-popup.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+  .dots-mobile-popup table {
+    width: 100%;
+  }
+  .dots-mobile-popup table td {
+    min-width: 50% !important;
+    width: 50% !important;
+    padding-right: 0 !important;
+  }
+  .dots-mobile-popup table td:first-of-type {
+    text-align: left;
+    font-weight: 700;
+  }
+  .dots-mobile-popup table tr:last-of-type td:first-of-type {
+    text-align: right;
+    padding-right: 10px !important;
+  }
+  .dots-mobile-popup table tr:last-of-type td:last-of-type {
+    text-align: left;
+    padding-left: 10px !important;
+  }
+  .dots-mobile-popup table .play-icon {
+    display: block;
+  }
+}
