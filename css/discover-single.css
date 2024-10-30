@@ -124,7 +124,6 @@
     bottom: 0;
     left: 0;
     background: #fff;
-    z-index: 10;
     width: 100%;
     padding: 20px 40px;
     box-shadow: 0 -10px 10px rgba(0,0,0,0.2);
@@ -132,6 +131,7 @@
     pointer-events: none;
     transform: translateY(50%);
     transition: all .3s ease;
+    z-index: 99;
   }
   .dots-mobile-popup.active {
     opacity: 1;

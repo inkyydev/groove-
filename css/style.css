@@ -434,7 +434,7 @@ input:focus {
   .main-nav__items--links {
     position: fixed;
     width: 100%;
-    height: calc(100dvh + 30px);
+    height: calc(100dvh - 30px);
     top: -30px;
     left: 0;
     background: #f6f8ff;

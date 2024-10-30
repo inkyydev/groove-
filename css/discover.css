@@ -89,11 +89,19 @@
   left: 50%;
   top: 50%;
   transform:translate(-50%,-50%);
+  opacity:0;
+  transition: all .3s ease;
+}
+.song-card:hover .play-icon {
+  opacity: 1;
 }
 .tags-title {
   display: none;
 }
 .tags-close {
+  display: none;
+}
+.filter-icon {
   display: none;
 }
 
