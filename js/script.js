@@ -16,6 +16,9 @@ var lastScrollTop = 0;
 
 $(window).scroll(function (event) {
   var st = $(this).scrollTop();
+  const target = $(".table-list");
+  const targetOffsetTop = target.offset().top + target.height();
+  const viewportBottom = $(window).scrollTop() + $(window).height();
 
   if (st > lastScrollTop) {
     $("#header").removeClass("scroll-up");
@@ -25,4 +28,10 @@ $(window).scroll(function (event) {
     $("#header").removeClass("scroll-down");
   }
   lastScrollTop = st;
+
+  if (viewportBottom >= targetOffsetTop) {
+    $(".table-list").addClass("active");
+  } else {
+    $(".table-list").removeClass("active");
+  }
 });

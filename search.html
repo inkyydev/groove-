@@ -835,20 +835,6 @@
 
           $(".srch-flter").toggleClass("active");
         });
-
-        $(window).on("scroll", function () {
-          const target = $(".table-list");
-          const targetOffsetTop = target.offset().top + target.height();
-
-          console.log(targetOffsetTop);
-          const viewportBottom = $(window).scrollTop() + $(window).height();
-
-          if (viewportBottom >= targetOffsetTop) {
-            $(".table-list").addClass("active");
-          } else {
-            $(".table-list").removeClass("active");
-          }
-        });
       });
     </script>
   </body>
