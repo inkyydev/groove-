@@ -144,27 +144,7 @@
 .filter-icon-wrapper {
   display: none;
 }
-.table-list {
-  margin-top: 18px;
-  border-top: 1px solid #3e79ff;
-  position: relative;
-  overflow: hidden;
-}
-.table-list::before {
-  position: fixed;
-  content: "";
-  background: linear-gradient(to bottom, rgba(246, 248, 255, 0), #f6f8ff);
-  width: 100%;
-  height: 300px;
-  bottom: 0;
-  left: 0;
-  z-index: 9;
-  transition: all 0.5s ease;
-  pointer-events: none;
-}
-.table-list.active::before {
-  transform: translateY(100%);
-}
+
 .llst-mang .song-lst,
 .llst-mang {
   display: flex;
@@ -281,9 +261,6 @@
   }
 }
 @media (max-width: 767px) {
-  .table-list::before {
-    height: 220px;
-  }
   #search_section {
     padding: 143px 0 50px;
   }
@@ -363,9 +340,7 @@
     display: flex;
     padding-right: 10px;
   }
-  .table-list {
-    margin-top: 5px;
-  }
+
   .filter-section {
     padding-bottom: 10px;
   }

@@ -314,7 +314,28 @@ input:focus {
   left: 0;
   visibility: hidden;
 }
-
+/* table shadow */
+.table-list {
+  margin-top: 18px;
+  border-top: 1px solid #3e79ff;
+  position: relative;
+  overflow: hidden;
+}
+.table-list::before {
+  position: fixed;
+  content: "";
+  background: linear-gradient(to bottom, rgba(246, 248, 255, 0), #f6f8ff);
+  width: 100%;
+  height: 300px;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+.table-list.active::before {
+  transform: translateY(100%);
+}
 @media (max-width: 1200px) {
   .container {
     padding-left: 40px;
@@ -487,5 +508,11 @@ input:focus {
   }
   .main-nav__items {
     margin-left: auto;
+  }
+  .table-list::before {
+    height: 220px;
+  }
+  .table-list {
+    margin-top: 5px;
   }
 }
