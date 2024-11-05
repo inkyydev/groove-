@@ -49,6 +49,9 @@ h1 {
   line-height: 1.1;
   font-weight: 700;
 }
+h1.small-h1 {
+  font-size: 60px;
+}
 .orange-text {
   color: #fd7351;
 }
@@ -157,8 +160,9 @@ input:focus {
   margin: 0 auto;
   width: 100%;
   top: 30px;
-  left: 0;
-  z-index: 99999;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
   transition: all 0.2s ease;
 }
 .scroll-down {
@@ -338,7 +342,7 @@ input:focus {
   content: "";
   background: linear-gradient(to bottom, rgba(246, 248, 255, 0), #f6f8ff);
   width: 100%;
-  height: 300px;
+  height: 150px;
   bottom: 0;
   left: 0;
   z-index: 9;
@@ -358,6 +362,7 @@ input:focus {
   }
 }
 @media (max-width: 1024px) {
+  h1.small-h1,
   h1 {
     font-size: 42px;
   }
@@ -377,6 +382,7 @@ input:focus {
   }
 }
 @media (max-width: 767px) {
+  h1.small-h1,
   h1 {
     font-size: 34px;
   }

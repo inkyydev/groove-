@@ -25,32 +25,60 @@
           <div class="col-12 col-xl-4 col-lg-5 col-md-6">
             <div class="form-wrapper">
               <h1>Sign Up</h1>
-              <form action="">
+              <form
+                method="POST"
+                action="https://planethandpan.shinedezign.pro/user/post-register"
+              >
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="TIXZnXkeGiXO7vwrL70i3i61eqtuAlseEP3m8kqa"
+                />
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    value=""
+                    required=""
+                    autocomplete="name"
+                    autofocus=""
+                  />
+                </div>
                 <div class="form-group">
                   <label for="email">Email</label>
                   <input
+                    id="email"
                     type="email"
                     class="form-control"
                     name="email"
-                    required
+                    value=""
+                    required=""
+                    autocomplete="email"
                   />
                 </div>
                 <div class="form-group password-first">
                   <label for="password">Password</label>
                   <input
+                    id="password"
                     type="password"
                     class="form-control"
                     name="password"
-                    required
+                    required=""
+                    autocomplete="new-password"
                   />
                 </div>
                 <div class="form-group confirm-password">
                   <label for="confirm_password">Confirm Password</label>
                   <input
+                    id="password-confirm"
                     type="password"
                     class="form-control"
-                    name="confirm_password"
-                    required
+                    name="password_confirmation"
+                    required=""
+                    autocomplete="new-password"
                   />
                 </div>
                 <button type="submit">Sign Up</button>
@@ -66,9 +94,10 @@
           </div>
           <div class="col-12 col-xl-8 col-lg-7 col-md-6">
             <div class="full-height-img sign-in-img">
-              <div class="floating-logo">
-                <img src="images/hero-logo.svg" alt="logo" />
+              <div class="btn-home">
+                <a href="/">Home</a>
               </div>
+
               <div class="testimonial-form-wrapper">
                 <h4>Marcus</h4>
                 <span>Student</span>
@@ -77,6 +106,9 @@
                   do eiusmod tempor incididunt
                 </p>
                 <img src="images/rates.svg" alt="rate" />
+              </div>
+              <div class="floating-logo">
+                <img src="images/hero-logo.svg" alt="logo" />
               </div>
             </div>
           </div>

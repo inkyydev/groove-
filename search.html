@@ -26,7 +26,7 @@
         <section id="search_section">
           <div class="container">
             <div class="search-heading">
-              <h1>
+              <h1 class="small-h1">
                 Find your <span class="orange-text">favorite</span> loops and
                 songs
               </h1>
@@ -65,7 +65,7 @@
                     <div class="form-group">
                       <select
                         name="category"
-                        class="form-control select2-show-search"
+                        class="form-control select2-show-search select2-show-search-genre"
                         id="category"
                         aria-label="Select Genre"
                       >
@@ -88,7 +88,7 @@
                       <select
                         name="key"
                         id="key"
-                        class="form-control select2-show-search"
+                        class="form-control select2-show-search select2-show-search-key"
                         aria-label="Select Key"
                       >
                         <option value="">Select Key</option>
@@ -111,7 +111,7 @@
                       <select
                         name="scale_type"
                         id="scale_type"
-                        class="form-control select2-show-search"
+                        class="form-control select2-show-search select2-show-search-type"
                         aria-label="Select Scale Type"
                       >
                         <option value="">Select Scale Type</option>
@@ -126,7 +126,7 @@
                       <select
                         name="signature"
                         id="signature"
-                        class="form-control select2-show-search"
+                        class="form-control select2-show-search select2-show-search-signature"
                         aria-label="Select Signature"
                       >
                         <option value="">Select Signature</option>
@@ -826,7 +826,21 @@
       $("#footer").load("includes/footer.html");
 
       $(document).ready(function () {
-        $(".select2-show-search").select2({});
+        $(".select2-show-search-genre").select2({
+          placeholder: "--Select Genre--",
+        });
+
+        $(".select2-show-search-key").select2({
+          placeholder: "--Select Key--",
+        });
+
+        $(".select2-show-search-type").select2({
+          placeholder: "--Select Scale Type--",
+        });
+
+        $(".select2-show-search-signature").select2({
+          placeholder: "--Select Signature--",
+        });
       });
 
       $(document).ready(function () {

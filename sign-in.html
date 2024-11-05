@@ -25,25 +25,42 @@
           <div class="col-12 col-xl-4 col-lg-5 col-md-6">
             <div class="form-wrapper">
               <h1>Sign In</h1>
-              <form action="">
+              <form
+                method="POST"
+                class="login-frm"
+                action="https://planethandpan.shinedezign.pro/user/post-login"
+              >
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="TIXZnXkeGiXO7vwrL70i3i61eqtuAlseEP3m8kqa"
+                />
                 <div class="form-group">
                   <label for="email">Email</label>
                   <input
+                    id="email"
                     type="email"
                     class="form-control"
                     name="email"
-                    required
+                    value=""
+                    autocomplete="off"
+                    autofocus=""
                   />
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input
+                    id="password"
                     type="password"
                     class="form-control"
                     name="password"
-                    required
+                    autocomplete="current-password"
                   />
-                  <a href="#">Forgot Password?</a>
+                  <a
+                    href="https://planethandpan.shinedezign.pro/forget-password"
+                  >
+                    Forgot Password?
+                  </a>
                 </div>
                 <button type="submit">Sign In</button>
               </form>
@@ -58,8 +75,8 @@
           </div>
           <div class="col-12 col-xl-8 col-lg-7 col-md-6">
             <div class="full-height-img sign-in-img">
-              <div class="floating-logo">
-                <img src="images/hero-logo.svg" alt="logo" />
+              <div class="btn-home">
+                <a href="/">Home</a>
               </div>
               <div class="testimonial-form-wrapper">
                 <h4>Monica</h4>
@@ -69,6 +86,9 @@
                   do eiusmod tempor incididunt
                 </p>
                 <img src="images/rates.svg" alt="rate" />
+              </div>
+              <div class="floating-logo">
+                <img src="images/hero-logo.svg" alt="logo" />
               </div>
             </div>
           </div>

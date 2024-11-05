@@ -1,3 +1,25 @@
+.modal-all {
+  z-index: 99999;
+}
+.modal-open {
+  overflow: visible !important;
+  padding: 0 !important;
+}
+.modal-dialog {
+  max-width: 780px;
+}
+.modal-content {
+  border: none;
+  border-radius: 20px;
+}
+.modal-body video {
+  border-radius: 10px;
+}
+.btn-close {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
 #hero_section {
   padding-left: calc((100vw - 1220px) / 2);
 }
@@ -24,7 +46,8 @@
   padding-top: 112px;
 }
 .hero-text img {
-  margin: 20px 0 35px;
+  margin: 30px 0 35px;
+  max-width: 450px;
 }
 .hero-text p {
   max-width: 452px;
@@ -651,6 +674,12 @@
   }
 }
 @media (max-width: 767px) {
+  .modal-content {
+    border-radius: 10px;
+  }
+  .btn-close {
+    margin-bottom: 10px;
+  }
   .play-single h3 {
     font-size: 20px;
   }
