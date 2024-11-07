@@ -102,15 +102,9 @@
 .select2-container--open .select2-selection__arrow::before {
   transform: translateY(-50%) rotate(180deg);
 }
-.select2-results__options::-webkit-scrollbar {
-  width: 5px;
-}
+
 .select2-results__options::-webkit-scrollbar-track {
   background: #f6f8ff;
-}
-.select2-results__options::-webkit-scrollbar-thumb {
-  background: #fa704e;
-  border-radius: 10px !important;
 }
 .select2-search__field {
   outline: none !important;

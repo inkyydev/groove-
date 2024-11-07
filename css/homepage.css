@@ -11,14 +11,26 @@
 .modal-content {
   border: none;
   border-radius: 20px;
+  background: transparent !important;
+}
+.modal-content .btn-close-all {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 10px;
 }
 .modal-body video {
   border-radius: 10px;
+}
+.modal-body video:focus-visible {
+  border: none !important;
+  outline: none !important;
 }
 .btn-close {
   display: flex;
   margin-left: auto;
   margin-bottom: 20px;
+  color: #fff !important;
+  box-shadow: none !important;
 }
 #hero_section {
   padding-left: calc((100vw - 1220px) / 2);
@@ -674,6 +686,11 @@
   }
 }
 @media (max-width: 767px) {
+  #play_your_way h2 span::before {
+    background-size: 72% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .modal-content {
     border-radius: 10px;
   }

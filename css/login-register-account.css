@@ -10,9 +10,9 @@
   right: 45px;
   background: #fa704e;
   border: 1px solid #fa704e;
-  height: 47px;
-  width: 171px;
-  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +22,14 @@
   background: #494c4f;
   color: #e5e5e6;
   border-color: #494c4f;
+}
+.logo-form-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+.logo-form-wrapper img {
+  width: 260px;
 }
 .form-wrapper {
   display: flex;
@@ -174,6 +182,9 @@
   .full-height-img {
     padding-left: 40px;
   }
+  .logo-form-wrapper img {
+    width: 280px;
+  }
 }
 @media (max-width: 767px) {
   .floating-logo-account {
@@ -188,7 +199,7 @@
   .form-wrapper {
     margin-left: 35px;
     margin-right: 35px;
-    padding: 90px 0 40px;
+    padding: 120px 0 40px;
     height: auto;
   }
   .floating-text {
@@ -213,8 +224,15 @@
   }
   .full-height-img .btn-home a {
     right: 20px;
-    width: 120px;
-    height: 40px;
     font-size: 12px;
+  }
+  .logo-form-wrapper {
+    top: 30px;
+  }
+  .logo-form-wrapper img {
+    width: 200px;
+  }
+  .floating-text p {
+    max-width: 175px;
   }
 }

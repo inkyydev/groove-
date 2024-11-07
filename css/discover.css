@@ -21,7 +21,11 @@
   gap: 10px;
   margin: 0 auto 30px;
   max-width: 640px;
-  flex-wrap: wrap;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+}
+.filter-list ul::-webkit-scrollbar {
+  height: 5px;
 }
 
 .filter-list ul li {
@@ -117,6 +121,12 @@
 }
 
 @media (max-width: 767px) {
+  .filter-list ul {
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    max-height: 265px;
+    overflow-y: scroll;
+  }
   #dis_section {
     padding: 143px 0 50px;
   }

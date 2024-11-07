@@ -1,6 +1,6 @@
 #dis_single_section {
   padding: 186px 0 60px;
-  background: #f6f8ff;
+  background: #f6f8ff !important;
 }
 .table-list-single {
   border-top: 0 !important;
@@ -42,7 +42,7 @@
 }
 
 .relatedtt-song {
-  padding: 0 0 60px;
+  padding: 30px 0 60px;
   background: #f6f8ff;
 }
 .relatedtt-song td {
@@ -68,6 +68,7 @@
 .play_svg0 .dots-mobile {
   display: none;
 }
+.relatedtt-song td:nth-of-type(4),
 .song-list td:nth-child(4) {
   text-align: center;
 }
