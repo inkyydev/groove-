@@ -8,20 +8,15 @@
   position: absolute;
   top: 20px;
   right: 45px;
-  background: #fa704e;
-  border: 1px solid #fa704e;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
 }
 .full-height-img .btn-home a:hover {
-  background: #494c4f;
-  color: #e5e5e6;
-  border-color: #494c4f;
+  background: #fff;
 }
 .logo-form-wrapper {
   position: absolute;

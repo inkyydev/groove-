@@ -108,6 +108,10 @@
   display: none;
 }
 
+.tags-close {
+  display: none !important;
+}
+
 @media (max-width: 1024px) {
   .search-heading h1 {
     max-width: 450px;
@@ -172,7 +176,7 @@
     margin-bottom: 15px;
   }
   .tags-close {
-    display: block;
+    display: block !important;
     position: absolute;
     right: 20px;
     top: 10px;

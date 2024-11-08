@@ -17,6 +17,12 @@
   display: flex;
   margin-left: auto;
   margin-bottom: 10px;
+  width: 39px;
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+.modal-content .btn-close-all:hover {
+  background-color: #fff !important;
 }
 .modal-body video {
   border-radius: 10px;

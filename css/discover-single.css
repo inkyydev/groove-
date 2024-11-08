@@ -8,6 +8,10 @@
 .song-loop {
   font-size: 14px;
   font-family: "Avenir Light";
+  align-items: center;
+}
+.song-loop p {
+  margin-bottom: 0;
 }
 .song-loop span {
   color: #767574;
