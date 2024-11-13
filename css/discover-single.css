@@ -156,7 +156,7 @@
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(50%);
+    transform: translateY(40px);
     transition: all 0.3s ease;
     z-index: 999;
   }
