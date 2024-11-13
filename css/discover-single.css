@@ -58,7 +58,7 @@
   font-weight: 700;
 }
 .relatedtt-song td:last-of-type {
-  min-width: 50px;
+  min-width: 100px;
 }
 .relatedtt-song thead td {
   border-bottom: 1px solid #3e79ff !important;
@@ -102,6 +102,18 @@
   }
 }
 @media (max-width: 767px) {
+  .song-lst-details {
+    font-size: 14px;
+  }
+  .play-icon img {
+    width: 35px;
+  }
+  .play-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
   #dis_single_section {
     padding: 143px 0 10px;
   }
@@ -123,7 +135,7 @@
     display: none;
   }
   .play_svg0 .play-icon {
-    display: none;
+    display: block;
   }
   .play_svg0 {
     text-align: right;
@@ -159,21 +171,18 @@
   .dots-mobile-popup table td {
     min-width: 50% !important;
     width: 50% !important;
+    max-width: 50%;
     padding-right: 0 !important;
   }
   .dots-mobile-popup table td:first-of-type {
     text-align: left;
     font-weight: 700;
   }
-  .dots-mobile-popup table tr:last-of-type td:first-of-type {
-    text-align: right;
-    padding-right: 10px !important;
-  }
-  .dots-mobile-popup table tr:last-of-type td:last-of-type {
-    text-align: left;
-    padding-left: 10px !important;
-  }
   .dots-mobile-popup table .play-icon {
     display: block;
+  }
+  .favorite-wrapper {
+    text-align: right;
+    margin-top: 20px;
   }
 }
