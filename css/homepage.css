@@ -21,9 +21,6 @@
   background-color: transparent !important;
   padding: 0 !important;
 }
-.modal-content .btn-close-all:hover {
-  background-color: #fff !important;
-}
 .modal-body video {
   border-radius: 10px;
 }

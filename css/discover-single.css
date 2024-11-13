@@ -96,6 +96,11 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .relatedtt-song td {
+    min-width: auto;
+  }
+}
 @media (max-width: 767px) {
   #dis_single_section {
     padding: 143px 0 10px;

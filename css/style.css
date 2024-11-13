@@ -19,17 +19,13 @@
   font-weight: 400;
 }
 .btn-close-all {
-  background: #fa704e;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  padding: 7px;
-  min-height: 39px;
-  min-width: 39px;
-}
-.btn-close-all:hover {
-  background: #494c4f;
+  padding: 0px;
+  max-height: 29px;
+  max-width: 29px;
 }
 body.active {
   max-height: 100vh;

@@ -13,6 +13,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <link rel="icon" type="image/png" href="favicon.png" />
     <title>Groove Engine - Search</title>
     <link rel="stylesheet" href="assets/select2.min.css" />
@@ -25,7 +29,7 @@
       <main>
         <section id="search_section">
           <div class="container">
-            <div class="search-heading">
+            <div class="search-heading" data-aos="fade-in">
               <h1 class="small-h1">
                 Find your <span class="orange-text">favorite</span> loops and
                 songs
@@ -53,7 +57,7 @@
                 </form>
               </div>
             </div>
-            <div class="filter-section-wrapper">
+            <div class="filter-section-wrapper" data-aos="fade-in">
               <div class="filter-icon-wrapper">
                 <a href="#">
                   <img src="images/filter-svg.svg" alt="filter" />
@@ -165,7 +169,7 @@
                 </form>
               </div>
             </div>
-            <div class="table-list">
+            <div class="table-list" data-aos="fade-in">
               <table class="table">
                 <tbody id="playlistBody">
                   <tr class="song-list">
@@ -820,6 +824,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="assets/select2.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
       $("#header").load("includes/header.html");
@@ -849,6 +854,15 @@
 
           $(".srch-flter").toggleClass("active");
         });
+      });
+
+      $(document).ready(function () {
+        setTimeout(function () {
+          AOS.init({
+            duration: 800,
+            once: true,
+          });
+        }, 400);
       });
     </script>
   </body>
