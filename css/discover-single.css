@@ -158,7 +158,11 @@
     pointer-events: none;
     transform: translateY(50%);
     transition: all 0.3s ease;
-    z-index: 99;
+    z-index: 999;
+  }
+  .dots-mobile-popup .btn-close-all {
+    margin-left: auto;
+    display: flex;
   }
   .dots-mobile-popup.active {
     opacity: 1;
@@ -173,6 +177,10 @@
     width: 50% !important;
     max-width: 50%;
     padding-right: 0 !important;
+    padding: 5px 0;
+  }
+  .dots-mobile-popup table td:last-of-type {
+    text-align: right;
   }
   .dots-mobile-popup table td:first-of-type {
     text-align: left;
