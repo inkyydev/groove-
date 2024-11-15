@@ -194,17 +194,19 @@ input:focus {
   width: 100%;
   top: 30px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0px);
   z-index: 999;
   transition: all 0.2s ease;
 }
 .scroll-down {
-  transform: translateY(-30px);
+  transform: translate(-50%, -30px) !important;
   opacity: 0;
+  pointer-events: none;
 }
 .scroll-up {
-  transform: translateY(0px);
+  transform: translate(-50%, 0px) !important;
   opacity: 1;
+  pointer-events: all;
 }
 .social-media-header {
   display: none;
