@@ -13,10 +13,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
     <link rel="icon" type="image/png" href="favicon.png" />
     <title>Groove Engine - Search</title>
     <link rel="stylesheet" href="assets/select2.min.css" />
@@ -29,10 +25,10 @@
       <main>
         <section id="search_section">
           <div class="container">
-            <div class="search-heading" data-aos="fade-in">
+            <div class="search-heading">
               <h1 class="small-h1">
-                Find your <span class="orange-text">favorite</span> loops and
-                songs
+                Find Your <span class="orange-text">Favorite</span> Loops and
+                Songs
               </h1>
               <img src="images/search-img-separator.svg" alt="line" />
               <div class="search-area">
@@ -57,7 +53,7 @@
                 </form>
               </div>
             </div>
-            <div class="filter-section-wrapper" data-aos="fade-in">
+            <div class="filter-section-wrapper">
               <div class="filter-icon-wrapper">
                 <a href="#">
                   <img src="images/filter-svg.svg" alt="filter" />
@@ -169,7 +165,7 @@
                 </form>
               </div>
             </div>
-            <div class="table-list" data-aos="fade-in">
+            <div class="table-list">
               <table class="table">
                 <tbody id="playlistBody">
                   <tr class="song-list">
@@ -824,7 +820,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="assets/select2.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
       $("#header").load("includes/header.html");
@@ -857,12 +852,18 @@
       });
 
       $(document).ready(function () {
-        setTimeout(function () {
-          AOS.init({
-            duration: 800,
-            once: true,
-          });
-        }, 400);
+        $(window).scroll(function (event) {
+          var st = $(this).scrollTop();
+          const target = $(".table-list");
+          const targetOffsetTop = target.offset().top + target.height();
+          const viewportBottom = $(window).scrollTop() + $(window).height();
+
+          if (viewportBottom >= targetOffsetTop) {
+            $(".table-list").addClass("active");
+          } else {
+            $(".table-list").removeClass("active");
+          }
+        });
       });
     </script>
   </body>

@@ -76,6 +76,9 @@
 .song-list td:nth-child(4) {
   text-align: center;
 }
+.dots-mobile-popup {
+  display: none;
+}
 
 @media (min-width: 1025px) {
   .relatedtt-song td:first-of-type {
@@ -159,6 +162,7 @@
     transform: translateY(40px);
     transition: all 0.3s ease;
     z-index: 999;
+    display: block;
   }
   .dots-mobile-popup .btn-close-all {
     margin-left: auto;

@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Montserrat", serif;
 }
+
 @font-face {
   font-family: "Avenir Black";
   src: url("../fonts/AvenirLTStd-Black.otf");
@@ -25,7 +26,20 @@
   border-radius: 50%;
   padding: 0px;
   max-height: 29px;
+  height: 29px;
+  width: 29px;
   max-width: 29px;
+  border: 1px solid #494c4f;
+}
+.btn-close-all:hover {
+  border-color: #494c4f !important;
+  background: #494c4f !important;
+}
+.btn-close-all svg path {
+  transition: all 0.2s ease;
+}
+.btn-close-all:hover svg path {
+  fill: #e5e5e6;
 }
 body.active {
   max-height: 100vh;
@@ -473,7 +487,7 @@ input:focus {
   .main-nav__items--links {
     position: fixed;
     width: 100%;
-    height: calc(100dvh - 30px);
+    height: calc(100dvh);
     top: -30px;
     left: 0;
     background: #f6f8ff;
